@@ -1,0 +1,539 @@
+@font-face {
+  font-family: Didact Gothic;
+  src: url("../fonts/DidactGothic-Regular.ttf");
+}
+
+@font-face {
+  font-family: Fjalla One;
+  src: url("../fonts/FjallaOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: workSans;
+  src: url("../fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+:root {
+  --gray: #9e9e9e;
+  --white: #fff;
+  --black: #000;
+  --darkgray: #333;
+  --lightgray: #666;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "workSans", Arial, Helvetica, sans-serif;
+}
+
+header p {
+  text-align: center;
+  font-size: clamp(1rem, 1vw, 2rem);
+  line-height: 23px;
+}
+
+section {
+  width: 100%;
+}
+
+h2,
+h1,
+img {
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+h2 {
+  font-family: "Didact Gothic";
+  font-weight: 400;
+  font-size: clamp(2.5rem, 8vw, 10rem);
+  line-height: 130%;
+  margin-bottom: 1vh;
+}
+img {
+  margin-bottom: 3vh;
+}
+
+h1 {
+  font-size: clamp(4rem, 8vw, 16rem);
+  line-height: 188px;
+  margin-bottom: 5vh;
+}
+
+/* all containers default smallsize*/
+
+[class|="container"] {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[class|="container"] article {
+  width: 80%;
+  margin: 0 auto;
+}
+
+[class|="container"] h3 {
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-size: clamp(8rem, 7vw, 11.2rem);
+  line-height: 147px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+[class|="container"] p {
+  font-style: normal;
+  font-size: clamp(1rem, 7vw, 2rem);
+  line-height: 23px;
+  letter-spacing: -0.05em;
+  color: var(--gray);
+}
+
+[class|="container"] p:first-of-type {
+  padding: 12vh 0 0 0;
+  margin: 0 0 20px 0;
+}
+
+[class|="container"] p {
+  margin: 0 0 80px 0;
+  letter-spacing: -0.05em;
+}
+
+[class|="container"] p:last-of-type {
+  padding: 0 0 0 0;
+  text-align: right;
+  font-family: "Fjalla One";
+  font-size: clamp(10rem, 7vw, 16.5rem);
+  line-height: 207px;
+  letter-spacing: -0.02em;
+}
+
+[class|="container"] a {
+  font-family: "Fjalla One";
+  font-size: clamp(1rem, 7vw, 1.6rem);
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 16px 26px;
+}
+
+[class|="container"] article p:first-of-type::before {
+  content: "─ ";
+  font-size: large;
+}
+
+/* large container*/
+
+.container-large {
+  min-height: 1056px;
+  height: 75vh;
+}
+.container-large p:first-of-type {
+  padding: 20vh 0 0 0;
+  margin: 0 0 20px 0;
+}
+.container-large a,
+.container-large h3 {
+  color: var(--black);
+}
+
+.container-large a {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+.container-large a:hover {
+  color: var(--white);
+  background-color: var(--black);
+  border-color: var(--black);
+}
+.container-large a:hover + .change {
+  color: var(--lightgray);
+}
+
+/* small */
+
+.container-small {
+  min-height: 826px;
+  height: 60vh;
+}
+
+.container-small a,
+.container-small h3 {
+  color: var(--white);
+}
+
+.container-small a {
+  border: 1px solid var(--white);
+}
+
+.container-small a:hover {
+  color: var(--black);
+  background-color: var(--white);
+  border-color: var(--black);
+}
+.container-small a:hover + .change {
+  color: var(--white);
+}
+
+/* images */
+
+.img1 {
+  background-image: url("../img/portfolio2.png");
+}
+
+.img2 {
+  background-image: url("../img/portfolio3.png");
+}
+
+.img3 {
+  background-image: url("../img/portfolio4.png");
+}
+.img4 {
+  background-image: url("../img/portfolio5.png");
+}
+
+/* last section */
+.whatmore {
+  background-color: var(--black);
+  padding-bottom: 5vh;
+  margin-bottom: 5vh;
+}
+
+.whatmore h4 {
+  font-style: normal;
+  font-size: clamp(9rem, 7vw, 18rem);
+  line-height: 211px;
+  text-align: center;
+  color: var(--white);
+  padding: 4vh 0 0 0;
+  margin-bottom: 6vh;
+}
+
+.whatmore article {
+  width: 55%;
+  margin: 0 0 0 auto;
+  text-align: left;
+  margin-bottom: 4vh;
+}
+
+.whatmore article p {
+  font-size: clamp(1.1rem, 7vw, 2.2rem);
+  line-height: 180%;
+  color: var(--lightgray);
+  letter-spacing: 0.01em;
+  margin-bottom: 4vh;
+}
+
+.whatmore article a {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 70px;
+  text-decoration: none;
+  letter-spacing: -0.06em;
+  color: var(--white);
+}
+.whatmore article a:hover {
+  text-decoration: underline;
+  color: var(--gray);
+}
+
+footer section {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+footer a {
+  margin-bottom: 6vh;
+  text-decoration: none;
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(8rem, 7vw, 16rem);
+  line-height: 210px;
+  color: var(--black);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer div {
+    margin-bottom: 4vh;
+    height: 1vh;
+}
+
+/* animation heart*/
+
+.heart {
+    font-size: 20px;
+    min-height: 20px;
+    position: absolute;
+    top: 20px;
+    left: 105px;
+    z-index: 3;
+    animation-name: heart;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heart {
+    0% {
+      color: var(--lightgray);
+      left: 107px;
+      font-size: 20px;
+      transform: rotateZ(0deg);
+    }
+    12.5% {
+      font-size: 30px;
+    }
+    24.9% {
+        font-size: 20px;
+    }
+    25% {
+      color: red;
+      left: 55px;
+      font-size: 0;
+      transform: rotateZ(-30deg);
+    }
+    50% {
+        color: var(--lightgray);
+        left: 107px;
+        font-size: 0;
+        transform: rotateZ(0deg);
+    }
+    62.5% {
+      font-size: 30px;
+    }
+    74.9% {
+        font-size: 20px;
+    }
+    75% {
+      color: red;
+      left: 165px;
+      font-size: 0;
+      transform: rotateZ(30deg);
+    }
+    100% {
+      color: var(--lightgray);
+      left: 107px;
+      font-size: 0;
+      transform: rotateZ(0deg);
+    }
+  }
+
+/* animation panda */ 
+  
+.panda {
+    margin: auto;
+    background-color: var(--lightgray);
+    width: 220px;
+    height: 220px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.ears {
+    background-color: var(--black);
+    width: 45px;
+    height: 60px;
+    position: absolute;
+    z-index: 3;
+    top: 54px;
+    left: 51px;
+    box-shadow: 72px 0 0 var(--black);
+    border-radius: 45% 45% 45% 45%;
+}
+.ears-in {
+    background-color: var(--darkgray);
+    width: 25px;
+    height: 35px;
+    position: absolute;
+    z-index: 3;
+    top: 12px;
+    left: 9px;
+    box-shadow: 72px 0 0 var(--darkgray);
+    border-radius: 45%;
+}
+.face {
+    background-color: var(--white);
+    width: 90px;
+    height: 100px;
+    position: absolute;
+    top: 67px;
+    left: 33px;
+    transform: translateX(35%);
+    z-index: 3;
+    border-radius: 30px 30px 37px 37px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+}
+.ear-cover {
+    background-color: var(--white);
+    width: 36px;
+    height: 53px;
+    position: absolute;
+    top: 28px;
+    left: -11px;
+    box-shadow: 73px 0 0 var(--white);
+    border-radius: 50%;
+}
+
+.eye-right {
+    background-color: var(--black);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    left: 53px;
+    border-radius: 50% 50% 0 50%;
+    animation: blink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+}
+
+.eye-left {
+    background-color: var(--black);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    left: 12px;
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.8;
+}
+.eye-right .eye-out {
+    animation-name: blink-eyeout;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.eye-out {
+    background-color: var(--gray);
+    width: 7px;
+    height: 5px;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    border-radius: 50%;
+}
+.brow {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+    width: 12px;
+    height: 4px;
+    background: var(--lightgray);
+    box-shadow: 42px 0 0 var(--lightgray);
+    border-radius: 10px;
+}
+.plush {
+    position: absolute;
+    top: 49px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: #fea38cf4;
+    box-shadow: 70px 0 0 #fea38cf4;
+    border-radius: 40%;
+    opacity: 0.8;
+}
+.nose {
+    background-color: var(--gray);
+    width: 12px;
+    height: 18px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+}
+.mouth {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 17px;
+    background-color: var(--black);
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+}
+.tongue{
+    background-color: red;
+    width: 18px;
+    height: 8px;
+    position: absolute;
+    bottom: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+.neck {
+    background-color: var(--white);
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    bottom: -76px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+}
+.body {
+    background-color: var(--white);
+    width: 160px;
+    height: 120px;
+    position: absolute;
+    bottom: -136px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+}
+.arm {
+    background-color: var(--black);
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    left: 12px;
+    box-shadow: 95px 0 0 var(--black);
+    border-radius: 50%;
+}
+
+@keyframes blink {
+    0% {
+        height: 20px;
+    }
+    50% {
+        height: 0;
+        top: 35px;
+    }
+    70% {
+        height: 20px;
+        top: 25px;
+    }
+}
+
+@keyframes blink-eyeout {
+    0% {
+        height: 5px;
+    }
+    50% {
+        height: 0;
+        top: 1px;
+    }
+    70% {
+        height: 5px;
+        top: 6px;
+    }
+}
