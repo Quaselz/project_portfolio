@@ -232,6 +232,7 @@ h1 {
   color: var(--lightgray);
   letter-spacing: 0.01em;
   margin-bottom: 4vh;
+  padding-right: 4vw;
 }
 
 .whatmore article a {
@@ -289,7 +290,7 @@ footer div {
     0% {
       color: var(--lightgray);
       left: 107px;
-      font-size: 20px;
+      font-size: 30px;
       transform: rotateZ(0deg);
     }
     12.5% {
